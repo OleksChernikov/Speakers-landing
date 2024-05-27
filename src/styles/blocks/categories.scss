@@ -1,0 +1,107 @@
+.categories {
+  &__wrapper {
+    display: grid;
+    row-gap: 40px;
+
+    @include onTablet {
+      row-gap: 56px;
+    }
+  }
+}
+
+.category {
+  position: relative;
+
+  &__fotos {
+    @include pageGrid;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    @include hover(transform, scale(1.03));
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--couples {
+      @include onTablet {
+        grid-column: 4 / 7;
+      }
+
+      @include onDesktop {
+        grid-column: 7 / 13;
+      }
+    }
+
+    &--no-couples {
+      @include onTablet {
+        grid-column: 1 / 4;
+      }
+
+      @include onDesktop {
+        grid-column: 1 / 7;
+      }
+    }
+  }
+    
+
+  &__foto {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 140%;
+
+    @include onTablet {
+      font-size: 24px;
+    }
+  }
+
+  &__button {
+    @include pageGrid;
+
+    &__view {
+      background: #f98921;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 27px;
+      text-align: center;
+      color: #fff;
+      padding: 14px;
+      margin-top: 40px;
+      transition: 0.5s;
+            
+
+      &:hover {
+        transition: 0.5s;
+        background: #1b2129;
+      }
+
+      &:active {
+        transition: 0.5s;
+        background: #010810;
+      }
+
+      grid-column: 1 / -1;
+      
+      @include onTablet {
+        grid-column: 1 / -1;
+        margin-top: 56px;
+      }
+
+      @include onDesktop {
+        grid-column: 1 / 5;
+        margin-top: 56px;
+      }
+    }
+  }
+}
