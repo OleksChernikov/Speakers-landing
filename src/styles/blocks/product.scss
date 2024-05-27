@@ -3,10 +3,17 @@
 
   &__foto {
     width: 100%;
-    
   }
 
   &:hover {
     cursor: pointer;
+  }
+
+  &__price {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #1B2129;
   }
 }

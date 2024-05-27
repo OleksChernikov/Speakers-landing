@@ -20,7 +20,7 @@
       margin: 0;
       margin-bottom: 16px;
       box-sizing: border-box;
-      border: none;
+      border: solid 2px #fff;
       padding: 14px 0 14px 16px;
       width: 100%;
       font-weight: 400;
@@ -31,10 +31,18 @@
       background: #f9f9f9;
       border-radius: 8px;
       height: 48px;
+      outline: none;
 
       &--textarea {
         height: 148px;
         resize: none;
+      }
+
+      &:hover {
+        background: #f9f9f9;
+        border: 2px solid #dbdbdb;
+        color: #1b2129;
+        box-sizing: border-box;
       }
 
       &:active {
@@ -44,12 +52,13 @@
         box-sizing: border-box;
       }
 
-      &:hover {
+      &:focus {
         background: #f9f9f9;
-        border: 1px solid #dbddbd;
+        border: 2px solid #f98921;
         color: #1b2129;
         box-sizing: border-box;
       }
+
     }
     
     &__button {
